@@ -23,6 +23,8 @@ class CreateCustomersTable extends Migration
             $table->string('otp_code');
             $table->foreignId('role_id');
             $table->string('referrer_code');
+            $table->foreignId('customer_kyc_id')->nullable();
+            $table->boolean('is_active')->default(0);
             $table->timestamps();
         });
     }
