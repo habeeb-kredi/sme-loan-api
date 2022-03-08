@@ -26,12 +26,12 @@ class CustomerRequest extends FormRequest
         return [
             'first_name'=>'required',
             'last_name'=>'required',
-            'email'=>'required',
-            'phone'=>'required',
+            'email'=>'required|email|unique:customers,email',
+            'phone'=>'required|unique:customers,phone',
             'password'=>'required',
-            'otp_code'=>'required',
-            'role_id'=>'required',
-            'referrer_code'=>'required',
+            'otp_code'=>'nullable',
+            'role_id'=>'nullable',
+            'referrer_code'=>'nullable',
         ];
     }
 }

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Referer extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'customer_id',
+        'referrer_code',
+        'status'
+    ];
 }

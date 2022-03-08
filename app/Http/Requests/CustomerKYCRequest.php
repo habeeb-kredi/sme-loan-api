@@ -31,9 +31,9 @@ class CustomerKYCRequest extends FormRequest
             'nationality'=>'required',
             'rc_number'=>'required',
             'business_type'=>'required',
-            'CAC'=>'required',
-            'utility'=>'required',
-            'bank_statement'=>'required'
+            'CAC'=>'nullable',
+            'utility'=>'nullable',
+            'bank_statement'=>'nullable'
         ];
     }
 }
